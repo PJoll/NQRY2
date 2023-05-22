@@ -1,6 +1,6 @@
-package main.com.Coffee
+package main.com.Coffee;
 
-import java.util.List
+import java.util.List;
 
 import main.com.Coffee.classes.CoffeePreparation;
 import main.com.Coffee.classes.CoffeeSize;
