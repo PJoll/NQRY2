@@ -1,11 +1,11 @@
-package main.com.Coffee;
+package main.java.com.server.api;
 
 import java.util.List;
 
-import main.com.Coffee.classes.CoffeePreparation;
-import main.com.Coffee.classes.CoffeeSize;
-import main.com.Coffee.classes.CoffeeType;
-import main.com.Coffee.classes.Condiment;
+import main.java.com.server.api.classes.CoffeePreparation;
+import main.java.com.server.api.classes.CoffeeSize;
+import main.java.com.server.api.classes.CoffeeType;
+import main.java.com.server.api.classes.Condiment;
 
 
 public class Coffee {
@@ -38,11 +38,11 @@ public class Coffee {
      */
     public String getDescription() {
         StringBuilder description = new StringBuilder();
-        description.append(getCoffeeTypeDesc()).append(" : ")
-                .append(getCoffeePreparationDesc()).append(" : ")
-                .append(getCoffeeSizeDesc()).append(" With : ");
+        description.append(getCoffeeTypeName()).append(" : ")
+                .append(getCoffeePreparationName()).append(" : ")
+                .append(getCoffeeSizeName()).append(" With : ");
         for (int i = 0; i < condiments.size(); i++) {
-            description.append(condiments.get(i).getDesc());
+            description.append(condiments.get(i).getName());
             if (i != condiments.size() - 1) {
                 description.append(", ");
             }
@@ -54,32 +54,30 @@ public class Coffee {
         return coffeeType;
     }
 
-    public String getCoffeeTypeDesc() {
-        return coffeeType.getDesc();
+    public String getCoffeeTypeName() {
+        return coffeeType.getName();
     }
 
     public CoffeePreparation getCoffeePreparation() {
         return coffeePreparation;
     }
 
-    public String getCoffeePreparationDesc() {
-        return coffeePreparation.getDesc();
+    public String getCoffeePreparationName() {
+        return coffeePreparation.getName();
     }
 
     public CoffeeSize getCoffeeSize() {
         return coffeeSize;
     }
 
-    public String getCoffeeSizeDesc() {
-        return coffeeSize.getDesc();
+    public String getCoffeeSizeName() {
+        return coffeeSize.getName();
     }
 
     public List<Condiment> getCondiments() {
         return condiments;
     }
 
-    public List<String> getCondimentsList() {
-        return condiments.stream().map(Condiment::getDesc).collect(Collectors.toList());
-    }
+  
 
 }

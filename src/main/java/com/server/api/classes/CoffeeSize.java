@@ -1,4 +1,4 @@
-package main.com.Coffee.classes;
+package main.java.com.server.api.classes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,7 +37,7 @@ public class CoffeeSize implements BaseClass {
 
     // Retrieve the CoffeeSize constant based on its description
     public static CoffeeSize getClassFromDescription(String description) {
-        for (CoffeeSize size : CoffeeSize.values()) {
+        for (CoffeeSize size : Arrays.asList(STANDARD, CHILD, LARGE, ADDICT)) {
             if (size.getName().equals(description)) {
                 return size;
             }

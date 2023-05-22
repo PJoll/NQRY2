@@ -1,4 +1,4 @@
-package main.com.Coffee.classes;
+package main.java.com.server.api.classes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,13 +35,13 @@ public class Condiment implements BaseClass {
     }
 
     // Method to retrieve the Condiment enum based on the description
-    public static Condiment getClassFromDescription(String description) {
+    public static Condiment getClassFromName(String name) {
         for (Condiment condiment : getAllValues()) {
-            if (condiment.getName().equals(description)) {
+            if (condiment.getName().equals(name)) {
                 return condiment;
             }
         }
         // Throw an exception if no Condiment constant matches the given description
-        throw new IllegalArgumentException("No Condiment found for description: " + description);
+        throw new IllegalArgumentException("No Condiment found for name: " + name);
     }
 }
