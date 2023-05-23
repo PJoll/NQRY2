@@ -32,22 +32,19 @@ public class Coffee {
         return totalCost;
     }
 
-    /*
-     * Return a default Concatenated Description.
-     * A Custom description can be formed using the individual getters.
-     */
-    public String getDescription() {
-        StringBuilder description = new StringBuilder();
-        description.append(getCoffeeTypeName()).append(" : ")
+    
+    public String getName() {
+        StringBuilder name = new StringBuilder();
+        name.append(getCoffeeTypeName()).append(" : ")
                 .append(getCoffeePreparationName()).append(" : ")
                 .append(getCoffeeSizeName()).append(" With : ");
         for (int i = 0; i < condiments.size(); i++) {
-            description.append(condiments.get(i).getName());
+            name.append(condiments.get(i).getName());
             if (i != condiments.size() - 1) {
-                description.append(", ");
+                name.append(", ");
             }
         }
-        return description.toString();
+        return name.toString();
     }
 
     public CoffeeType getCoffeeType() {
