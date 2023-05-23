@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import main.java.com.server.app.classes.CoffeePreparation;
+
+import java.util.List;
 
 
 public class CoffeePreparationTest {
@@ -37,18 +40,18 @@ public class CoffeePreparationTest {
     }
 
     @Test
-    public void testGetClassFromDescription() {
-        // Call the getClassFromDescription() method with an existing description
-        CoffeePreparation preparation = CoffeePreparation.getClassFromDescription("Espresso");
+    public void testGetClassFromName() {
+        // Call the getClassFromName() method with an existing dname
+        CoffeePreparation preparation = CoffeePreparation.getClassFromName("Espresso");
 
         // Assert that the returned CoffeePreparation instance has the expected name
         String expectedName = "Espresso";
         String actualName = preparation.getName();
         assertEquals(expectedName, actualName);
 
-        // Call the getClassFromDescription() method with a non-existing description
+        // Call the getClassFromName() method with a non-existing name
         assertThrows(IllegalArgumentException.class, () -> {
-            CoffeePreparation.getClassFromDescription("Cortado");
+            CoffeePreparation.getClassFromName("Long Black");
         });
     }
 }
