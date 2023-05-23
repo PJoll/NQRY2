@@ -1,20 +1,23 @@
-package main.java.com.server.api;
+package main.java.com.server.app;
 
 import java.util.List;
 
-import main.java.com.server.api.classes.CoffeePreparation;
-import main.java.com.server.api.classes.CoffeeSize;
-import main.java.com.server.api.classes.CoffeeType;
-import main.java.com.server.api.classes.Condiment;
+import main.java.com.server.app.classes.CoffeePreparation;
+import main.java.com.server.app.classes.CoffeeSize;
+import main.java.com.server.app.classes.CoffeeType;
+import main.java.com.server.app.classes.Condiment;
 
 
 public class Coffee {
 
+    // Fields to store the coffee type, preparation, size and condiments
     private final CoffeeType coffeeType;
     private final CoffeePreparation coffeePreparation;
     private final CoffeeSize coffeeSize;
     private final List<Condiment> condiments;
 
+
+    //Constructor to initialize the coffee type, preparation, size and condiments
     public Coffee(CoffeeType coffeeType, CoffeePreparation coffeePreparation, CoffeeSize coffeeSize,
                   List<Condiment> condiments) {
 
@@ -23,7 +26,7 @@ public class Coffee {
         this.coffeeSize = coffeeSize;
         this.condiments = condiments;
     }
-
+    // Method to calculate and return the total cost of the cofffee 
     public double getCost() {
         double totalCost = coffeeType.getCost() + coffeePreparation.getCost() + coffeeSize.getCost();
         for (Condiment condiment : condiments) {
@@ -32,7 +35,7 @@ public class Coffee {
         return totalCost;
     }
 
-    
+    // Method to generate and return the name of the coffee 
     public String getName() {
         StringBuilder name = new StringBuilder();
         name.append(getCoffeeTypeName()).append(" : ")
@@ -46,7 +49,7 @@ public class Coffee {
         }
         return name.toString();
     }
-
+    // getter methods to return the coffee type, preparation, size and condiments
     public CoffeeType getCoffeeType() {
         return coffeeType;
     }

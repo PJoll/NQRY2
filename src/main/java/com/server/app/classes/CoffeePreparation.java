@@ -1,4 +1,4 @@
-package main.java.com.server.api.classes;
+package main.java.com.server.app.classes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,13 +35,13 @@ public class CoffeePreparation implements BaseClass {
     public static List<CoffeePreparation> getAllValues() {
         return Arrays.asList(ESPRESSO, LATTE, CAPPUCCINO, MACCHIATO, MOCHA);
     }
-    public static CoffeePreparation getClassFromDescription(String description) {
+    public static CoffeePreparation getClassFromName(String name) {
         for (CoffeePreparation preparation : getAllValues()) {
-            if (preparation.getName().equals(description)) {
+            if (preparation.getName().equals(name)) {
                 return preparation;
             }
         }
-        // Throw an exception if no CoffeePreparation constant matches the given description
-        throw new IllegalArgumentException("No CoffeePreparation found for description: " + description);
+        // Throw an exception if no CoffeePreparation constant matches the given name
+        throw new IllegalArgumentException("No CoffeePreparation found for name: " +name);
     }
 }

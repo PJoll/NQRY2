@@ -1,7 +1,7 @@
-package main.java.com.server.api.classes;
+package main.java.com.server.app.classes;
 
 
-// creating 
+
 
 public interface BaseClass {
     public abstract double getCost();

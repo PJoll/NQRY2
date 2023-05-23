@@ -1,11 +1,11 @@
-package main.java.com.server.api;
+package main.java.com.server.app;
 
 import java.util.List;
 
-import main.java.com.server.api.classes.CoffeePreparation;
-import main.java.com.server.api.classes.CoffeeSize;
-import main.java.com.server.api.classes.CoffeeType;
-import main.java.com.server.api.classes.Condiment;
+import main.java.com.server.app.classes.CoffeePreparation;
+import main.java.com.server.app.classes.CoffeeSize;
+import main.java.com.server.app.classes.CoffeeType;
+import main.java.com.server.app.classes.Condiment;
 
 
 

@@ -1,4 +1,4 @@
-package main.java.com.server.api.classes;
+package main.java.com.server.app.classes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,14 +35,14 @@ public class CoffeeSize implements BaseClass {
         return Arrays.asList(STANDARD, CHILD, LARGE, ADDICT);
     }
 
-    // Retrieve the CoffeeSize constant based on its description
-    public static CoffeeSize getClassFromDescription(String description) {
+    // Retrieve the CoffeeSize constant based on its name
+    public static CoffeeSize getClassFromName(String name) {
         for (CoffeeSize size : Arrays.asList(STANDARD, CHILD, LARGE, ADDICT)) {
-            if (size.getName().equals(description)) {
+            if (size.getName().equals(name)) {
                 return size;
             }
         }
-        // Throw an exception if no CoffeeSize constant matches the given description
-        throw new IllegalArgumentException("No CoffeeSize found for description: " + description);
+        // Throw an exception if no CoffeeSize constant matches the given name
+        throw new IllegalArgumentException("No CoffeeSize found for name: " + name);
     }
 }

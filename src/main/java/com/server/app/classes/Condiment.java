@@ -1,4 +1,4 @@
-package main.java.com.server.api.classes;
+package main.java.com.server.app.classes;
 
 import java.util.Arrays;
 import java.util.List;

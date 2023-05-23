@@ -1,4 +1,4 @@
-package main.java.com.server.api.classes;
+package main.java.com.server.app.classes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,14 +35,14 @@ public class CoffeeType implements BaseClass {
         return Arrays.asList(HOUSEBLEND, DARKROAST, ROBUSTA, ARABICA);
     }
 
-    // Method to retrieve the CoffeeType enum based on the description
-    public static CoffeeType getClassFromDescription(String description) {
+    // Method to retrieve the CoffeeType enum based on the name
+    public static CoffeeType getClassFromName(String name) {
         for (CoffeeType type : getAllValues()) {
-            if (type.getName().equals(description)) {
+            if (type.getName().equals(name)) {
                 return type;
             }
         }
-        // Throw an exception if no CoffeeType constant matches the given description
-        throw new IllegalArgumentException("No CoffeeType found for description: " + description);
+        // Throw an exception if no CoffeeType constant matches the given name
+        throw new IllegalArgumentException("No CoffeeType found for name: " + name);
     }
 }
