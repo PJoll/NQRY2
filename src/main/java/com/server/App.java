@@ -6,7 +6,16 @@ import main.java.com.server.app.classes.CoffeeSize;
 import main.java.com.server.app.classes.CoffeeType;
 import main.java.com.server.app.Coffee;
 import java.util.ArrayList;
-import  java.util.List;
+import java.util.List;
+
+// public class App 
+// {
+//     public static void main( String[] args )
+//     {
+//         Condiment condiment  = Condiment.getClassFromName("Sugar");  // create a new instance of the class
+//       System.out.println(condiment.getCost()); //print the cost
+//     }
+// }
 
 public class App 
 {
