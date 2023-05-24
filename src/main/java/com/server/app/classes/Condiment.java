@@ -34,14 +34,14 @@ public class Condiment implements BaseClass {
         return Arrays.asList(MILK, SUGAR, COCO);
     }
 
-    // Method to retrieve the Condiment enum based on the description
+    // Method to retrieve the Condiment enum based on the name
     public static Condiment getClassFromName(String name) {
         for (Condiment condiment : getAllValues()) {
             if (condiment.getName().equals(name)) {
                 return condiment;
             }
         }
-        // Throw an exception if no Condiment constant matches the given description
+        // Throw an exception if no Condiment constant matches the given name
         throw new IllegalArgumentException("No Condiment found for name: " + name);
     }
 }

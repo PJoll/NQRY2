@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CoffeePreparation implements BaseClass {
-    // Constants with their descriptions and costs
+    // Constants with their names and costs
     public static final CoffeePreparation ESPRESSO = new CoffeePreparation("Espresso", 1.0);
     public static final CoffeePreparation LATTE = new CoffeePreparation("Latte", 1.25);
     public static final CoffeePreparation CAPPUCCINO = new CoffeePreparation("Cappuccino", 1.50);

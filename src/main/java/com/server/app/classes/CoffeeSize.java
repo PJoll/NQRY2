@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CoffeeSize implements BaseClass {
-    // Constants with their descriptions and costs
+    // Constants with their names and costs
     public static final CoffeeSize STANDARD = new CoffeeSize("Standard", 0.0);
     public static final CoffeeSize CHILD = new CoffeeSize("Child", 0.75);
     public static final CoffeeSize LARGE = new CoffeeSize("Large", 1.50);
